@@ -77,7 +77,7 @@ import Spare from './pages/Spare.svelte';
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		background-color: $primary;
+		background-color: $background;
 	}
 
 	.header {

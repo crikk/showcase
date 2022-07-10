@@ -28,19 +28,19 @@
         let root = document.querySelector(':root');
 
         if (themeToSwitchTo == 'light_mode') { // dark_mode colours
-            root.style.setProperty('--primary',  '#000033');
-            root.style.setProperty('--pri-light',  '#2a2b5d');
-            root.style.setProperty('--pri-dark',  '#00000f');
-            root.style.setProperty('--secondary', '#2196f3');
-            root.style.setProperty('--sec-light',  '#2196f3');
-            root.style.setProperty('--sec-dark',  '#0069c0');
+            root.style.setProperty('--background',  '#043154');
+            root.style.setProperty('--back-light',  '#2a2b5d');
+            root.style.setProperty('--back-dark',  '#00000f');
+            root.style.setProperty('--text', '#ffffff');
+            root.style.setProperty('--highlight',  '#6ec6ff');
+            root.style.setProperty('--contrast',  '#5bb1f5');
         } else { // switch to dark, means set current to light theme
-            root.style.setProperty('--primary',  '#2196f3');
-            root.style.setProperty('--pri-light',  '#2196f3');
-            root.style.setProperty('--pri-dark',  '#0069c0');
-            root.style.setProperty('--secondary', '#000033');
-            root.style.setProperty('--sec-light',  '#2a2b5d');
-            root.style.setProperty('--sec-dark',  '#00000f');
+            root.style.setProperty('--background',  '#ffffff');
+            root.style.setProperty('--back-light',  '#6ec6ff');
+            root.style.setProperty('--back-dark',  '#5bb1f5');
+            root.style.setProperty('--text', '#043154');
+            root.style.setProperty('--highlight',  '#2a2b5d');
+            root.style.setProperty('--contrast',  '#00000f');
         }
     }
 
@@ -94,8 +94,8 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: $primary;
-        color: white;
+        background-color: $back-dark;
+        color: $text;
     }
 
     .title-row {
@@ -109,7 +109,7 @@
         padding: 0.5rem;
         border-radius: 50%;
         font-size: 32px;
-        color: $sec-light;
+        color: $highlight;
         transition: transform 1s;
     }
 
@@ -130,7 +130,7 @@
 
         .icon-size {
             font-size: 48px;
-            color: $secondary;
+            color: $text;
         }
     }
 
@@ -157,7 +157,7 @@
     }
 
     .link-text {
-        color: lightblue;
+        color: $highlight;
     }
 
     button {

@@ -20,9 +20,10 @@ export var path = "";
     .tile-background {
         margin: 0.5rem;
         border-radius: 5px;
-        box-shadow: 5px 5px 10px 5px $primary;
+        box-shadow: 5px 5px 10px 5px $back-dark;
         border: none;                       
-        background-color: white;
+        background-color: $background;
+        color: $text;
         display: flex;
         padding: 1rem;
         opacity: 1;
@@ -52,7 +53,7 @@ export var path = "";
 
     .label-text {
         margin-top: 1rem;
-        color: $primary;
+        color: $text;
         font-weight: 600;
         font-size: 1.25rem
     }

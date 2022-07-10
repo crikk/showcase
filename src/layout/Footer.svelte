@@ -11,8 +11,8 @@
         
     .footerContainer {
         width: 100%;
-        background-color: $pri-light;
-        color: white;
+        background-color: $back-dark;
+        color: $contrast;
         padding-top: 0.125rem; 
         padding-bottom: 0.25rem; 
     }

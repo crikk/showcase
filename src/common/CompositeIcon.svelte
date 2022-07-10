@@ -18,13 +18,13 @@
 
 .main-icon {
     font-size: 4rem;
-    color: $primary;
+    color: $text;
 }
 
 .overlay-icon {
     font-size: 2rem;
     font-weight: 600;
-    color: $secondary;
+    color: $contrast;
     position: absolute;
     top: 2.25rem;
     left: 2.25rem;

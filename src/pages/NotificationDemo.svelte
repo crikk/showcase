@@ -23,7 +23,7 @@
     }
 </script>
 
-<div class="search-page">
+<div class="page-style">
     <h2>{$_("notificationDemo.title")}</h2>
 
     <div class="column spacing">
@@ -45,5 +45,19 @@
     .spacing {
         justify-content: space-evenly;
         min-height: 9rem;
+    }
+
+    .page-style {
+        height: 100%;
+        background-color: $back-light;
+        color: $text;
+        padding: 1rem;
+        @media (min-width: 500px) {
+            padding: 2rem;
+        }
+    }
+
+    button {
+        margin-right: 3rem;
     }
  </style>    

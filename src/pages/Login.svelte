@@ -76,7 +76,7 @@
       
     .mobileBackground {
         padding: 2rem;
-        background-color: $pri-dark;
+        background-color: $back-dark;
         height: 100%;
     }
 
@@ -112,18 +112,14 @@
     .loginBubble {
         border-radius: 5px;
         border: none;                       
-        background-color: $pri-dark;
-        color: $secondary;
+        background-color: $background;
+        color: $text;
         display: flex;
         flex-direction: column;
         align-content: flex-start;
         align-items: flex-start;
         padding: 1.25rem;
         z-index: 100;
-    }
-
-    h1, p {
-        color: $sec-light;
     }
 
     input{

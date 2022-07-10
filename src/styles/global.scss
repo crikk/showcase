@@ -1,9 +1,9 @@
-$primary: var(--primary,#000033);
-$pri-light: var(--pro-light, #2a2b5d);
-$pri-dark: var(--pri-dark,#00000f);
-$secondary: var(--secondary, #2196f3);
-$sec-light: var(--sec-light, #6ec6ff);
-$sec-dark: var(--sec-dark, #0069c0);
+$background: var(--background,#043154);
+$back-light: var(--back-light, #2a2b5d);
+$back-dark: var(--back-dark,#00000f);
+$text: var(--text, #ffffff);
+$highlight: var(--highlight, #6ec6ff);
+$contrast: var(--contrast, #5bb1f5);
 
 $error-text: var(--error-text, #B00020);
 $error-icon: var(--error-icon, #B00020);
@@ -25,23 +25,13 @@ a:visited {
 	text-decoration: none;
 }
 
-h2 {
-	color: $sec-light;
-    background-color: $primary;
-}
-
-.search-page {
-	background-color: white;
-	color: $primary;
-	padding: 1rem;
-	@media (min-width: 500px) {
-		padding: 2rem;
-	}
+h1, h2, h3 {
+	color: $highlight;
 }
 
 button {
-	color: $secondary;
-	background-color: $primary;
+	color: $background;
+	background-color: $text;
 	border-radius: 5px;
 	padding: 0.375rem;
 	font-size: 1rem;

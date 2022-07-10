@@ -1,12 +1,12 @@
 :root {
 	--default-font: Roboto, Segoe UI, Helvetica Neue, sans-serif;
 
-	--primary: #000033;
-	--pri-light: #2a2b5d;
-	--pri-dark: #00000f;
-	--secondary: #2196f3;
-	--sec-light: #6ec6ff;
-	--sec-dark: #0069c0;
+	--background: #043154;
+	--back-light: #2a2b5d;
+	--back-dark: #00000f;
+	--text: #ffffff;
+	--highlight: #6ec6ff;
+	--contrast: #5bb1f5;
 
 	--error-text: #B00020;
 	--error-icon: #B00020;
