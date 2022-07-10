@@ -1,6 +1,7 @@
 {
     "appTitle": "FR_Svelte Showcase",
     "header": {
+        "home": "FR_Home",
         "logout": "FR_Logout",
         "newLangCode": "en",
         "switchToLang": "English",
@@ -27,10 +28,9 @@
         "loginBtn": "FR_Login"
     },
     "tiles": {
-        "dialogDemo": "FR_Dialog Demo",
+        "admin": "FR_User Administration",
         "notificationDemo": "FR_Notification Demo",
-        "inputDemo": "FR_Form Input Demo",
-        "css": "FR_CSS Variables",
-        "responsiveDemo": "FR_UI Demo"
+        "dndcalc": "FR_D&D Calculator",
+        "spare": "FR_Spare"
     }
 }

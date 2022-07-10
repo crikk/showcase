@@ -1,6 +1,7 @@
 {
     "appTitle": "Svelte Showcase",
     "header": {
+        "home": "Home",
         "logout": "Logout",
         "newLangCode": "fr",
         "switchToLang": "Français",
@@ -27,10 +28,13 @@
         "loginBtn": "Login"
     },
     "tiles": {
-        "dialogDemo": "Dialog Demo",
+        "admin": "User Administration",
         "notificationDemo": "Notification Demo",
-        "inputDemo": "Form Input Demo",
-        "css": "CSS Variables",
-        "responsiveDemo": "UI Demo"
+        "dndcalc": "D&D Calculator",
+        "spare": "Spare"
+    },
+    "notificationDemo": {
+        "title": "Notification Demo",
+        "label": "Enter a string for your notification, then press a button to add one of that type"
     }
 }

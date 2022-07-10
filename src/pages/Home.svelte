@@ -10,13 +10,13 @@
  
  <div class="main">
      <div class="tiles">
-         <Tile mainIcon="chat_bubble" overlayIcon="school" label="{$_('tiles.dialogDemo')}" path="dialogDemo"></Tile>
+         <Tile mainIcon="admin_panel_settings" overlayIcon="" label="{$_('tiles.admin')}" path="admin"></Tile>
          <Tile mainIcon="notifications" overlayIcon="school" label="{$_('tiles.notificationDemo')}" path="notificationDemo"></Tile>
-         <Tile mainIcon="article" overlayIcon="school" label="{$_('tiles.inputDemo')}" path="inputDemo"></Tile>
-         <Tile mainIcon="dark_mode" overlayIcon="school" label="{$_('tiles.css')}" path="cssVariables"></Tile>
-         <Tile mainIcon="mobile_friendly" overlayIcon="school" label="{$_('tiles.responsiveDemo')}" path="responsiveDemo"></Tile>
+         <Tile mainIcon="castle" overlayIcon="groups_3" label="{$_('tiles.dndcalc')}" path="dndcalc"></Tile>
+         <Tile mainIcon="help" overlayIcon="school" label="{$_('tiles.spare')}" path="spare"></Tile>
+         <Tile mainIcon="help" overlayIcon="school" label="{$_('tiles.spare')}" path="spare"></Tile>
      </div>
-    </div>
+   </div>
  
  <style type="text/scss">
     @import '../styles/global';

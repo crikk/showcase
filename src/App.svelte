@@ -11,6 +11,10 @@
 	import NotificationPanel from './layout/NotificationPanel.svelte';
 	import Home from './pages/Home.svelte'
 	import Login from './pages/Login.svelte'
+	import Admin from './pages/Admin.svelte';
+	import NotificationDemo from './pages/NotificationDemo.svelte';
+	import DandDCalculator from './pages/DandDCalculator.svelte';
+import Spare from './pages/Spare.svelte';
 
 	export let url = "/";
 	var unsub;
@@ -48,11 +52,10 @@
 				<div class="content" role="main">
 					{#if $currentUser}
 						<Route path="/" component="{Home}" />
-						<!-- <Route path="/dialogDemo" component="{DialogDemo}" /> -->
-						<!-- <Route path="/notificationDemo" component="{NotificationDemo}" />  -->
-						<!-- <Route path="/inputDemo" component="{InputDemo}" />  -->
-						<!-- <Route path="/cssVariables" component="{CSSVariables}" />  -->
-						<!-- <Route path="/responsiveDemo" component="{ResponsiveDemo}" />  -->
+						<Route path="/admin" component="{Admin}" />
+						<Route path="/notificationDemo" component="{NotificationDemo}" /> 
+						<Route path="/dndcalc" component="{DandDCalculator}" /> 
+						<Route path="/spare" component="{Spare}" /> 
 					{:else}
 						<Route path="/" component="{Login}" />
 					{/if}

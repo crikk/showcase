@@ -1,4 +1,5 @@
 <script>
+    import { _ } from 'svelte-i18n';
     import { navigate } from "svelte-routing";
     import { createEventDispatcher } from 'svelte';
 	import { currentUser } from "../stores/util.js"
@@ -60,7 +61,7 @@
             <button on:click={() => {goHome()}}>
                 <div class="labelled-icon">
                     <i class="material-icons icon-size">home</i>
-                    <span class="link-text">Home</span>
+                    <span class="link-text">{$_('header.home')}</span>
                 </div>
             </button>
             <button on:click={() => {logout()}}>
