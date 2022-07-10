@@ -1,0 +1,59 @@
+$primary: var(--primary,#000033);
+$pri-light: var(--pro-light, #2a2b5d);
+$pri-dark: var(--pri-dark,#00000f);
+$secondary: var(--secondary, #2196f3);
+$sec-light: var(--sec-light, #6ec6ff);
+$sec-dark: var(--sec-dark, #0069c0);
+
+$error-text: var(--error-text, #B00020);
+$error-icon: var(--error-icon, #B00020);
+$error-background: var(--error-background, #ffebee);
+$warning-text: var(--warning-text, #a02c08);
+$warning-icon: var(--warning-icon, #a02c08);
+$warning-background: var(--warning-background, #fff8e1);
+$info-text: var(--info-text, #164f1a);
+$info-icon: var(--info-icon, #164f1a);
+$info-background: var(--info-background, #e8f5e9);
+
+$header-icons: var(--header-icons, 1);
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+h2 {
+	color: $sec-light;
+    background-color: $primary;
+}
+
+.search-page {
+	background-color: white;
+	color: $primary;
+	padding: 1rem;
+	@media (min-width: 500px) {
+		padding: 2rem;
+	}
+}
+
+button {
+	color: $secondary;
+	background-color: $primary;
+	border-radius: 5px;
+	padding: 0.375rem;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}

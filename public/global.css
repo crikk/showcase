@@ -1,0 +1,88 @@
+:root {
+	--default-font: Roboto, Segoe UI, Helvetica Neue, sans-serif;
+
+	--primary: #000033;
+	--pri-light: #2a2b5d;
+	--pri-dark: #00000f;
+	--secondary: #2196f3;
+	--sec-light: #6ec6ff;
+	--sec-dark: #0069c0;
+
+	--error-text: #B00020;
+	--error-icon: #B00020;
+	--error-background: #ffebee;
+	--warning-text: #a02c08;
+	--warning-icon: #a02c08;
+	--warning-background: #fff8e1;
+	--info-text: #164f1a;
+	--info-icon: #164f1a;
+	--info-background: #e8f5e9;
+
+	--header-icons: 2;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: var(--default-font, "Arial");
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}

@@ -1,0 +1,36 @@
+{
+    "appTitle": "FR_Svelte Showcase",
+    "header": {
+        "logout": "FR_Logout",
+        "newLangCode": "en",
+        "switchToLang": "English",
+        "light_mode": "FR_Light Mode",
+        "dark_mode": "FR_Dark Mode"
+    },
+    "buttons": {
+        "submit": "FR_Submit"
+    },
+    "errors": {
+        "required": "FR_This is a required field"
+    },
+    "winTitles": {
+        "app": "FR_Svelte Showcase",
+        "login": "FR_Login",
+        "home": "FR_Home"
+    },
+    "login": {
+        "title": "FR_Login",
+        "prompt": "FR_Please enter credentials to access this application",
+        "account": "FR_Account Name",
+        "user": "FR_User Name",
+        "password": "FR_Password",
+        "loginBtn": "FR_Login"
+    },
+    "tiles": {
+        "dialogDemo": "FR_Dialog Demo",
+        "notificationDemo": "FR_Notification Demo",
+        "inputDemo": "FR_Form Input Demo",
+        "css": "FR_CSS Variables",
+        "responsiveDemo": "FR_UI Demo"
+    }
+}
