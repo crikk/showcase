@@ -23,12 +23,15 @@ You shouldn't need to access the JSON Server directly, but if you want to, it ru
 When you run the application, it will prompt you with a login screen.  The credentials for this are:
 
 Username: **guest**  
-Password: **Rbcexpress@1**
+Password: **password**
 
 Username: **admin**  
-Password: **Rbcexpress@1**
+Password: **password**
 
-The *admin* user will have access to an extra tile where you can add, edit and delete users.  The *guest* user will not see this tile and has no access to this page.
+The *admin* user will see an extra tile after they login for User Administration.  This will take you to a screen where you can Add, Edit and Delete users.
+
+The *guest* user does not have access to this screen.  (So yes, currently, a guest can not reset their own password as that is part of the Edit screen.  It's just a demo app, cut me some slack.)
+
 ---
 
 # Features
