@@ -11,6 +11,12 @@
       "password": "31e3ce1ddd0e04c06b1a6866ac79f10eef06e8965a9991a66050f253e29ba84e",
       "admin": false,
       "id": 2
+    },
+    {
+      "id": 3,
+      "username": "admin",
+      "password": "31e3ce1ddd0e04c06b1a6866ac79f10eef06e8965a9991a66050f253e29ba84e",
+      "admin": true
     }
   ]
 }
