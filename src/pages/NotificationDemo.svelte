@@ -2,6 +2,9 @@
     import { _ } from 'svelte-i18n';
     import { pageNameKey } from "../stores/titleStore";
     import { notificationStore } from "../stores/notificationStore";
+    
+   // provided as a prop from svelte-routing (get a warning if we don't declare this)
+   export let location;
 
     $pageNameKey = "notificationDemo";
 

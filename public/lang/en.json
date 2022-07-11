@@ -9,7 +9,11 @@
         "dark_mode": "Dark Mode"
     },
     "buttons": {
-        "submit": "Submit"
+        "submit": "Submit",
+        "ok": "Okay",
+        "cancel": "Cancel",
+        "edit": "Edit",
+        "delete": "Delete"
     },
     "errors": {
         "required": "This is a required field"
@@ -17,12 +21,12 @@
     "winTitles": {
         "app": "Svelte Showcase",
         "login": "Login",
-        "home": "Home"
+        "home": "Home",
+        "admin": "Admin"
     },
     "login": {
         "title": "Login",
         "prompt": "Please enter credentials to access this application",
-        "account": "Account Name",
         "user": "User Name",
         "password": "Password",
         "loginBtn": "Login"
@@ -36,5 +40,23 @@
     "notificationDemo": {
         "title": "Notification Demo",
         "label": "Enter a string for your notification, then press a button to add one of that type"
+    },
+    "admin": {
+        "title": "User Administration",
+        "create": "Create User",
+        "prompt": "An Administrator user can not be deleted, you must edit the user first to make them not an Admin.  Editing a user will automatically force a password reset.",
+        "ch": {
+            "name": "Username",
+            "admin": "Is Admin?",
+            "actions": "Actions"
+        },
+        "dialog": {
+            "dlgCreateTitle": "Create User",
+            "dlgEditTitle": "Edit User",
+            "username": "Username",
+            "password": "Password",
+            "confPassword": "Confirm Password",
+            "admin": "Is an Administrator"
+        }
     }
 }

@@ -1,54 +1,16 @@
 {
-  "dockets": [
-    {
-      "name": "Cameron",
-      "active": true,
-      "id": 4,
-      "createDate": "2021-02-26T05:40:40.625Z"
-    },
-    {
-      "id": 7,
-      "name": "Legal Aid 2",
-      "active": true,
-      "createDate": "2021-01-28T05:40:40.625Z"
-    },
-    {
-      "id": 8,
-      "name": "Kirsty",
-      "active": true,
-      "createDate": "2021-02-26T05:40:40.625Z"
-    },
-    {
-      "id": 11,
-      "name": "Just month/day/year",
-      "active": true,
-      "createDate": "2021-02-14T05:40:40.625Z"
-    },
-    {
-      "id": 12,
-      "name": "New date format",
-      "active": true,
-      "createDate": "2021-02-02T05:40:40.625Z"
-    },
-    {
-      "id": 17,
-      "name": "Demo",
-      "active": true,
-      "createDate": "2022-07-03T16:45:11.094Z"
-    }
-  ],
   "users": [
     {
-      "account": "Test",
+      "id": 1,
       "username": "cclark01",
       "password": "2c09935d520441ffcbb3a38989f64bc9416dfe73fbb9a1fd63bf973801acfb81",
       "admin": true
     },
     {
-      "account": "Test",
       "username": "guest",
-      "password": "2c09935d520441ffcbb3a38989f64bc9416dfe73fbb9a1fd63bf973801acfb81",
-      "admin": false
+      "password": "31e3ce1ddd0e04c06b1a6866ac79f10eef06e8965a9991a66050f253e29ba84e",
+      "admin": false,
+      "id": 2
     }
   ]
 }

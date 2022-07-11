@@ -20,7 +20,7 @@
 
     function logout() {
         $currentUser = null;
-        navigate("/", {});
+        navigate("/", { replace: true });
     }
 
     function changeTheme() {

@@ -3,6 +3,10 @@
    import Tile from "../common/Tile.svelte";
    import { pageNameKey } from "../stores/titleStore";
    import { notificationStore } from '../stores/notificationStore';
+   import { currentUser } from '../stores/util';
+
+   // provided as a prop from svelte-routing (get a warning if we don't declare this)
+   export let location;
 
     $pageNameKey ="home";
     notificationStore.clearAll();
@@ -10,7 +14,9 @@
  
  <div class="main">
      <div class="tiles">
-         <Tile mainIcon="admin_panel_settings" overlayIcon="" label="{$_('tiles.admin')}" path="admin"></Tile>
+         {#if $currentUser?.admin}
+            <Tile mainIcon="admin_panel_settings" overlayIcon="" label="{$_('tiles.admin')}" path="admin"></Tile>
+         {/if}
          <Tile mainIcon="notifications" overlayIcon="school" label="{$_('tiles.notificationDemo')}" path="notificationDemo"></Tile>
          <Tile mainIcon="castle" overlayIcon="groups_3" label="{$_('tiles.dndcalc')}" path="dndcalc"></Tile>
          <Tile mainIcon="help" overlayIcon="school" label="{$_('tiles.spare')}" path="spare"></Tile>

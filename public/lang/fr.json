@@ -9,7 +9,11 @@
         "dark_mode": "FR_Dark Mode"
     },
     "buttons": {
-        "submit": "FR_Submit"
+        "submit": "FR_Submit",
+        "ok": "FR_Okay",
+        "cancel": "FR_Cancel",
+        "edit": "FR_Edit",
+        "delete": "FR_Delete"
     },
     "errors": {
         "required": "FR_This is a required field"
@@ -17,12 +21,12 @@
     "winTitles": {
         "app": "FR_Svelte Showcase",
         "login": "FR_Login",
-        "home": "FR_Home"
+        "home": "FR_Home",
+        "admin": "Admin"
     },
     "login": {
         "title": "FR_Login",
         "prompt": "FR_Please enter credentials to access this application",
-        "account": "FR_Account Name",
         "user": "FR_User Name",
         "password": "FR_Password",
         "loginBtn": "FR_Login"
@@ -32,5 +36,27 @@
         "notificationDemo": "FR_Notification Demo",
         "dndcalc": "FR_D&D Calculator",
         "spare": "FR_Spare"
+    },
+    "notificationDemo": {
+        "title": "FR_Notification Demo",
+        "label": "FR_Enter a string for your notification, then press a button to add one of that type"
+    },
+    "admin": {
+        "title": "FR_User Administration",
+        "create": "FR_Create User",
+        "prompt": "FR_An Administrator user can not be deleted, you must edit the user first to make them not an Admin.  Editing a user will automatically force a password reset.",
+        "ch": {
+            "name": "FR_Username",
+            "admin": "FR_Is Admin?",
+            "actions": "FR_Actions"
+        },
+        "dialog": {
+            "dlgCreateTitle": "FR_Create User",
+            "dlgEditTitle": "FR_Edit User",
+            "username": "FR_Username",
+            "password": "FR_Password",
+            "confPassword": "FR_Confirm Password",
+            "admin": "FR_Is an Administrator"
+        }
     }
 }

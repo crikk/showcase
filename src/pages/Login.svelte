@@ -7,22 +7,24 @@
     import { navigate } from "svelte-routing";
     import { pageNameKey } from "../stores/titleStore";
 	import { isMobile } from './../stores/mediaStore.js';
+    
+   // provided as a prop from svelte-routing (get a warning if we don't declare this)
+   export let location;
 
     $pageNameKey = "login";
 
-    let account;
     let username;
     let password;
 
     async function login() {
         notificationStore.clearAll();  // remove all messages before adding new or navigating away
         let encryptedPass = encryptPassword();
-        let url = `users?account=${account}&username=${username}&password=${encryptedPass}`;
+        let url = `users?username=${username}&password=${encryptedPass}`;
 
         let { data } = await httpGet(url);
         // no match will still return a 200, but with a result object of {}, so just check that it has properties
         if (data.length > 0) {
-            $currentUser = data;
+            $currentUser = data[0];
             navigate("/");
         } else {
             notificationStore.addError("Credentials not found");
@@ -39,16 +41,15 @@
 <div class="mobileBackground">
     <h1>{$_('login.title')}</h1>
     <p>{$_('login.prompt')}</p>
-    <label for="acctField">{$_('login.account')}</label>
-    <input id="acctField" type="text" bind:value={account}>
-
     <label for="userField">{$_('login.user')}</label>
     <input id="userField" type="text" bind:value={username}>
 
     <label for="passField">{$_('login.password')}</label>
     <input id="passField" type="password" bind:value={password}>
 
-    <button on:click={() => login()}>{$_('login.loginBtn')}</button>
+    <button on:click={() => login()}>
+        <i class="material-icons icon-size">logout</i>{$_('login.loginBtn')}
+    </button>
 </div>
 {:else}
 <div class="main">
@@ -56,16 +57,15 @@
         <div class="loginBubble">
             <h1>{$_('login.title')}</h1>
             <p>{$_('login.prompt')}</p>
-            <label for="acctField">{$_('login.account')}</label>
-            <input id="acctField" type="text" bind:value={account}>
-
             <label for="userField">{$_('login.user')}</label>
             <input id="userField" type="text" bind:value={username}>
 
             <label for="passField">{$_('login.password')}</label>
             <input id="passField" type="password" bind:value={password}>
 
-            <button on:click={() => login()}>{$_('login.loginBtn')}</button>
+            <button on:click={() => login()}>
+                <i class="material-icons icon-size">logout</i>{$_('login.loginBtn')}
+            </button>
         </div>
     </div>
 </div>
@@ -127,4 +127,12 @@
         margin-bottom: 1rem;
         margin-top: 0.25rem;
     }
+
+    button {
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
 </style>
