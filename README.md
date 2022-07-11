@@ -22,10 +22,13 @@ You shouldn't need to access the JSON Server directly, but if you want to, it ru
 
 When you run the application, it will prompt you with a login screen.  The credentials for this are:
 
-Account: **Test**  
 Username: **guest**  
-Password: **TBD**
+Password: **Rbcexpress@1**
 
+Username: **admin**  
+Password: **Rbcexpress@1**
+
+The *admin* user will have access to an extra tile where you can add, edit and delete users.  The *guest* user will not see this tile and has no access to this page.
 ---
 
 # Features
