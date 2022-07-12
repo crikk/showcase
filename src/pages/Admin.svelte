@@ -106,7 +106,7 @@
 </script>
 
 <div class="page">
-  <h1>{$_("admin.title")}</h1>
+  <h2>{$_("admin.title")}</h2>
 
   <button on:click={createUser}>
     <i class="material-icons">person_add</i>{$_("admin.create")}

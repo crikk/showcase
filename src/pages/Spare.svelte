@@ -7,7 +7,7 @@
 
 <div class="page">
 
-    <h1>A Spare page</h1>
+    <h2>A Spare page</h2>
     <p>Placeholder in case I get any more ideas of things I'd like to try  out</p>
     
 </div>

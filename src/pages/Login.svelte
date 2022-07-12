@@ -39,7 +39,7 @@
 
 {#if $isMobile}
 <div class="mobileBackground">
-    <h1>{$_('login.title')}</h1>
+    <h2>{$_('login.title')}</h2>
     <p>{$_('login.prompt')}</p>
     <label for="userField">{$_('login.user')}</label>
     <input id="userField" type="text" bind:value={username}>
