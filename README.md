@@ -89,3 +89,13 @@ I used a similar trick (again in the *Header.js*) to space out the icons in the 
     }
 ```
 This uses the Svelte "make statment reactive" syntax of **$:** to check if a user is logged in or not.  If they are logged in, then there are 4 buttons present and if the user is not logged on, then only 2 buttons will be present.  If this were a "real" application, I'd probably have an object with a bunch of booleans to track the on/off state of each button and have code that counts how buttons are currently visible.  This button state would be a store and so I'd use that instead of looking at the $currentUser.
+
+## User Administration
+
+The intent of this demo was to test the various REST operations: GET, POST, PUT and DELETE.  I also wanted to see how easy/hard it was to do dialogs in a Svelte application.  This was based on something I did over a year ago, so I don't recall where I got the dialog code from (sorry, would attribute if I could!).
+
+One important note: Although it would be nice to populate the Edit dialog with the user's password, the password is hashed via a 1-way hash so we can't decrypt it.  Since we're using the JSON Server as our backend, a hash makes more sense since we can simply compare the hash in the database with the hash of the user's entered password without needing to decrypt anything.  The drawback is that if you invoke the Edit user function, you have to provide a "new" password.  The password field doesn't have any "rules" on it for length, so you can actually leave it blank for "no password" if you want, so long as the Confirmation field is the same.
+
+At any rate, the dialog takes a callback method as one of it's inputs and invokes it when the user clicks OK.  This passes the data back to the original page where we can call the appropriate HTTP method.  I "complicated" things by re-using the same dialog for both Create and Edit.  Mostly because I wanted to see if I could.  Because of the use of callbacks and the need to have *async* functions for calling the HTTP methods, this component has a lot of small methods.  Definitely some possibilities for further breaking things down into small components with which to compose the screen.  (For example, the *Edit* and *Delete* buttons could be made into their own components that could then take ownership of the code for popping open the dialog and calling the HTTP method that corresponds to the button.)
+
+Currently, the only difference between an Admin and a non-Admin user is whether they have access to this screen.  Ideally, both users would have access; however, for a non-Admin user, they'd only see themselves in the list or they'd see everyone, but wouldn't have any actions available.
