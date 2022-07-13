@@ -48,6 +48,7 @@
         top: 4.375rem;
         background-color: $highlight;
         color: $back-dark;
+        font-weight: bold;
     }
 
     label {

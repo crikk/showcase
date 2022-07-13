@@ -1,15 +1,15 @@
 <script>
-  import { onMount } from 'svelte';
-  import { pageNameKey } from "../stores/titleStore";
-  import ImageValue from "../dndcomponents/ImageValue.svelte";
-  import StatBlock from "../dndcomponents/StatBlock.svelte";
-import { httpGet } from '../util/api';
-import SavingThrows from '../dndcomponents/SavingThrows.svelte';
+    import { onMount } from 'svelte';
+    import { pageNameKey } from "../stores/titleStore";
+    import ImageValue from "../dndcomponents/ImageValue.svelte";
+    import StatBlock from "../dndcomponents/StatBlock.svelte";
+    import { httpGet } from '../util/api';
+    import SavingThrows from '../dndcomponents/SavingThrows.svelte';
 
-  $pageNameKey = "dndcalc";
+    $pageNameKey = "dndcalc";
 
-  // provided as a prop from svelte-routing (get a warning if we don't declare this)
-  export let location;
+    // provided as a prop from svelte-routing (get a warning if we don't declare this)
+    export let location;
 
     // data loaded from DB
     let races = [];
@@ -17,75 +17,76 @@ import SavingThrows from '../dndcomponents/SavingThrows.svelte';
     let selectedRace = {};
     let selectedClass = {};
 
-  // character's primary attributes
-  let str = 8;
-  let dex = 8;
-  let con = 8;
-  let int = 8;
-  let wis = 8;
-  let chr = 8;
+    // character's primary attributes
+    let str = 8;
+    let dex = 8;
+    let con = 8;
+    let int = 8;
+    let wis = 8;
+    let chr = 8;
 
-  let xp = 0;
+    let xp = 0;
 
-  // bonuses/penalties computed from the primary attributes
-  $: strAdj = Math.floor((str - 10) / 2);
-  $: dexAdj = Math.floor((dex - 10) / 2);
-  $: conAdj = Math.floor((con - 10) / 2);
-  $: intAdj = Math.floor((int - 10) / 2);
-  $: wisAdj = Math.floor((wis - 10) / 2);
-  $: chrAdj = Math.floor((chr - 10) / 2);
+    // bonuses/penalties computed from the primary attributes
+    $: strAdj = Math.floor((str - 10) / 2);
+    $: dexAdj = Math.floor((dex - 10) / 2);
+    $: conAdj = Math.floor((con - 10) / 2);
+    $: intAdj = Math.floor((int - 10) / 2);
+    $: wisAdj = Math.floor((wis - 10) / 2);
+    $: chrAdj = Math.floor((chr - 10) / 2);
 
-  $: hitDie = selectedClass?.hitDie;
+    $: hitDie = selectedClass?.hitDie;
 
-  $: armorClass = 10 + dexAdj;
-  $: hitPoints = ((hitDie + conAdj) + ((level - 1) * ((selectedClass.hitDie / 2 + 1) + conAdj)));
-  $: level = calcLevel(xp);
-  $: speed = selectedRace?.move;
-  $: initiative = dexAdj;
+    $: armorClass = 10 + dexAdj;
+    $: hitPoints = ((hitDie + conAdj) + ((level - 1) * ((selectedClass.hitDie / 2 + 1) + conAdj)));
+    $: level = calcLevel(xp);
+    $: speed = selectedRace?.move;
+    $: initiative = dexAdj;
 
-  $: proficiency = Math.floor((level - 1) / 4) + 2;
+    $: proficiency = Math.floor((level - 1) / 4) + 2;
 
     onMount(async () => {
-       const raceResult = await httpGet("races");
-       races = raceResult.data;
-       selectedRace = races[0];
-       
-       const classResult = await httpGet("classes");
-       classes = classResult.data;
-       selectedClass = classes[0];
+        const raceResult = await httpGet("races");
+        races = raceResult.data;
+        selectedRace = races[0];
+        
+        const classResult = await httpGet("classes");
+        classes = classResult.data;
+        selectedClass = classes[0];
     });
 
     async function loadData() {
         races = await httpGet("/races");
     }
 
-  function calcLevel(currentXP) {
-    if (currentXP < 300) return 1;
-    if (currentXP < 900) return 2;
-    if (currentXP < 2700) return 3;
-    if (currentXP < 6500) return 4;
-    if (currentXP < 14000) return 5;
-    if (currentXP < 23000) return 6;
-    if (currentXP < 34000) return 7;
-    if (currentXP < 48000) return 8;
-    if (currentXP < 64000) return 9;
-    if (currentXP < 85000) return 10;
-    if (currentXP < 100000) return 11;
-    if (currentXP < 120000) return 12;
-    if (currentXP < 140000) return 13;
-    if (currentXP < 165000) return 14;
-    if (currentXP < 195000) return 15;
-    if (currentXP < 225000) return 16;
-    if (currentXP < 265000) return 17;
-    if (currentXP < 305000) return 18;
-    if (currentXP < 355000) return 19;
-    if (currentXP >= 355000) return 20;
-  }
+    function calcLevel(currentXP) {
+        if (currentXP < 300) return 1;
+        if (currentXP < 900) return 2;
+        if (currentXP < 2700) return 3;
+        if (currentXP < 6500) return 4;
+        if (currentXP < 14000) return 5;
+        if (currentXP < 23000) return 6;
+        if (currentXP < 34000) return 7;
+        if (currentXP < 48000) return 8;
+        if (currentXP < 64000) return 9;
+        if (currentXP < 85000) return 10;
+        if (currentXP < 100000) return 11;
+        if (currentXP < 120000) return 12;
+        if (currentXP < 140000) return 13;
+        if (currentXP < 165000) return 14;
+        if (currentXP < 195000) return 15;
+        if (currentXP < 225000) return 16;
+        if (currentXP < 265000) return 17;
+        if (currentXP < 305000) return 18;
+        if (currentXP < 355000) return 19;
+        if (currentXP >= 355000) return 20;
+    }
 </script>
 
 <div class="page">
   <h2>D&D (Reactive) Character Sheet</h2>
   <div class="grid-container">
+
     <!-- First row -->
     <div class="characterId">
       <div class="inputGrouping">
@@ -113,6 +114,7 @@ import SavingThrows from '../dndcomponents/SavingThrows.svelte';
         <input id="charXP" bind:value={xp} />
       </div>
     </div>
+
     <!-- First Column -->
     <div class="stat-column">
       <StatBlock label="Strength" bind:value={str} />
@@ -122,6 +124,7 @@ import SavingThrows from '../dndcomponents/SavingThrows.svelte';
       <StatBlock label="Wisdom" bind:value={wis} />
       <StatBlock label="Charisma" bind:value={chr} />
     </div>
+
     <!-- Second Column -->
     <div class="combat-stats">
       <ImageValue title="Level" value={level} imageUrl="/images/scroll_icon.png"/>
