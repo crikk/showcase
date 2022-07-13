@@ -22,7 +22,8 @@
         "app": "Svelte Showcase",
         "login": "Login",
         "home": "Home",
-        "admin": "Admin"
+        "admin": "Admin",
+        "dndcalc": "D&D Calculator"
     },
     "login": {
         "title": "Login",

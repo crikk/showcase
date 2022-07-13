@@ -18,5 +18,85 @@
       "admin": true,
       "id": 3
     }
+  ],
+  "races": [
+    {
+      "name": "Human",
+      "move": "6\""
+    },
+    {
+      "name": "Elf, Wild",
+      "move": "7\""
+    },
+    {
+      "name": "Dwarf",
+      "move": "5\""
+    },
+    {
+      "name": "Elf, High",
+      "move": "6\""
+    }
+  ],
+  "classes": [
+    {
+      "name": "Fighter",
+      "hitDie": 10,
+      "saves": ["str", "con"]
+    },
+    {
+      "name": "Cleric",
+      "hitDie": 8,
+      "saves": ["wis", "chr"]
+    },
+    {
+      "name": "Ranger",
+      "hitDie": 10,
+      "saves": ["str", "dex"]
+    },
+    {
+      "name": "Rogue",
+      "hitDie": 8,
+      "saves": ["dex", "int"]
+    },
+    {
+      "name": "Wizard",
+      "hitDie": 6,
+      "saves": ["int", "wis"]
+    },
+    {
+      "name": "Sorcerer",
+      "hitDie": 6,
+      "saves": ["con", "chr"]
+    },
+    {
+      "name": "Bard",
+      "hitDie": 8,
+      "saves": ["dex", "chr"]
+    },
+    {
+      "name": "Barbarian",
+      "hitDie": 12,
+      "saves": ["str", "con"]
+    },
+    {
+      "name": "Druid",
+      "hitDie": 8,
+      "saves": ["int", "wis"]
+    },
+    {
+      "name": "Paladin",
+      "hitDie": 10,
+      "saves": ["wis", "chr"]
+    },
+    {
+      "name": "Monk",
+      "hitDie": 8,
+      "saves": ["str", "dex"]
+    },
+    {
+      "name": "Warlock",
+      "hitDie": 8,
+      "saves": ["wis", "chr"]
+    }
   ]
 }

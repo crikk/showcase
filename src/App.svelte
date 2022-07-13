@@ -31,7 +31,6 @@ import Spare from './pages/Spare.svelte';
 	})
 
     $: if (!$isLocaleLoaded) {
-		console.log("in if !$isLocaleLoaded")
         setupI18n({ withLocale: 'en' });
     }
 </script>
